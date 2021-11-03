@@ -1,0 +1,38 @@
+import matplotlib.pyplot as plt
+import typing
+import math
+import numpy as np
+from functools import lru_cache
+
+
+@lru_cache(maxsize=None)
+def get_primes(lower, upper) -> typing.Generator[int, None, None]:
+    """Generate primes with the given range"""
+    for num in range(lower, upper + 1):
+        if num > 1:
+            for i in range(2, int(math.sqrt(num)) + 1):
+                if num % i == 0:
+                    break
+            else:
+                yield num
+
+
+def get_coordinates(num) -> tuple:
+    """Get the polar coordinates of a point"""
+    return [num * math.sin(num), num * math.cos(num)]
+
+
+plt.style.use(['dark_background'])
+plt.figure(figsize=(40, 40))
+plt.axis("off")
+
+num = 1000000  # change the number of primes to get different results
+
+ar = [*map(get_coordinates, get_primes(0, num))]
+data = np.array(ar)
+x, y = data.T
+
+plt.scatter(x, y, s=2, c=np.random.rand(len(x), 3))
+plt.savefig(f"primes_{num}.png")
+plt.show()
+
