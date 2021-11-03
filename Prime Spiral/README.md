@@ -4,6 +4,6 @@ Python code to generate prime spirals. Do note that larger number of primes may 
 1) 1 Million
 ![100000](./1_million.png)
 2) 10 Million
-![10 Million](./10_Million.png)
+![10 Million](./10_million.png)
 3) 100 Million
-![100 Million](./100_Million.png)
+![100 Million](./100_million.png)
