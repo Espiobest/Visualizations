@@ -51,8 +51,8 @@ def save_image(z: np.ndarray, title: str = "Mandelbrot Set") -> None:
     plt.show(title=title)
 
 
-FRAMES = 30  # reduce the number of frames for a faster output
-INTERVAL = 100  # reduce the interval for a faster output
+FRAMES = 30  # change the number of frames in the gif
+INTERVAL = 100  # reduce the interval between frames for faster processing
 
 x_min, x_max = -2.1, 0.6
 y_min, y_max = -1.5, 1.5
