@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
+import numpy as np
+
+from functools import lru_cache
 import typing
 import math
-import numpy as np
-from functools import lru_cache
 
 
 @lru_cache(maxsize=None)
