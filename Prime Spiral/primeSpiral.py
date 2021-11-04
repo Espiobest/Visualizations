@@ -17,9 +17,9 @@ def get_primes(lower, upper) -> typing.Generator[int, None, None]:
                 yield num
 
 
-def get_coordinates(num) -> tuple:
+def get_coordinates(num: int) -> tuple:
     """Get the polar coordinates of a point"""
-    return [num * math.sin(num), num * math.cos(num)]
+    return num * math.sin(num), num * math.cos(num)
 
 
 plt.style.use(['dark_background'])
