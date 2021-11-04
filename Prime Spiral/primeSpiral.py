@@ -6,7 +6,7 @@ from functools import lru_cache
 
 
 @lru_cache(maxsize=None)
-def get_primes(lower, upper) -> typing.Generator[int, None, None]:
+def get_primes(lower: int, upper: int) -> typing.Generator[int, None, None]:
     """Generate primes within the given range"""
     for num in range(lower, upper + 1):
         if num > 1:
