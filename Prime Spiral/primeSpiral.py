@@ -19,7 +19,7 @@ def get_primes(lower: int, upper: int) -> typing.Generator[int, None, None]:
 
 
 def get_coordinates(num: int) -> tuple:
-    """Get the polar coordinates of a point"""
+    """Get the polar co-ordinates of a point"""
     return num * math.sin(num), num * math.cos(num)
 
 
@@ -27,7 +27,7 @@ def main():
     
     plt.style.use(['dark_background'])
     plt.figure(figsize=(40, 40))
-    plt.axis("off")
+    plt.axis("off") # remove axes from the plot
     
     num = 1000000  # change the number of primes to get different results
     
